@@ -1,3 +1,5 @@
+import T from 'prop-types';
+
 export const Input = ({
   type = 'text',
   name,
@@ -13,3 +15,11 @@ export const Input = ({
     onChange={onChange}
   />
 );
+
+Input.propTypes = {
+  type: T.string,
+  name: T.string,
+  value: T.string.isRequired,
+  placeholder: T.string,
+  onChange: T.func.isRequired,
+}

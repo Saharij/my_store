@@ -1,28 +1,40 @@
 import { useState } from 'react';
+import { getLocalStorageItem, setLocalStorageItem } from '../../../components/utils/localStorage';
+import { Input } from './inputComponent';
+
+const defaultUser = {
+  name: '',
+  email: '',
+  password: '',
+}
 
 export const SignUp = () => {
-  const [createName, setName] = useState('');
-  const [createEmail, setEmail] = useState('');
-  const [createPassword, setPassword] = useState('');
+  const [user, setUser] = useState(defaultUser);
+  const [error, setError] = useState('')
+  const isSubmitDisabled = !user.name || !user.email || !user.password;
 
-  const inputName = ({ target }) => {
-    setName(target.value);
-  };
-
-  const inputEmail = ({ target }) => {
-    setEmail(target.value);
-  };
-
-  const inputPassword = ({ target }) => {
-    setPassword(target.value);
-  };
+  const handleInputChange = ({ target: { value, name }}) => {
+    setUser((state) => ({
+      ...state,
+      [name]: value,
+    }))
+  }
 
   const signUpForm = (event) => {
     event.preventDefault();
 
-    setName('');
-    setEmail('');
-    setPassword('');
+    if (!isSubmitDisabled) {
+      const users = getLocalStorageItem('users') || [];
+      const hasUser = users.some(({ email }) => email === user.email);
+
+      if (hasUser) {
+        setError('User with this email already exist!');
+      } else {
+        setLocalStorageItem('users', [...users, user]);
+      }
+    }
+
+    setUser(defaultUser);
   }
 
   return (
@@ -32,31 +44,34 @@ export const SignUp = () => {
         action=""
         onSubmit={signUpForm}
       >
-        <input
+        <Input
           type="text"
-          value={createName}
+          name="name"
+          value={user.name}
           placeholder="Write your full name"
-          onChange={inputName}
-          required
+          onChange={handleInputChange}
         />
-        <input
+        <Input
           type="email"
-          value={createEmail}
+          name="email"
+          value={user.email}
           placeholder="Write your email"
-          onChange={inputEmail}
-          required
+          onChange={handleInputChange}
         />
-        <input
+        <Input
           type="password"
-          value={createPassword}
+          name="password"
+          value={user.password}
           placeholder="Write your password"
-          onChange={inputPassword}
-          required
+          onChange={handleInputChange}
         />
-        <button>
-          Sign in
-        </button>
-        <button type="submit">
+        {error && (
+          <p>{error}</p>
+        )}
+        <button
+          type="submit"
+          disabled={isSubmitDisabled}
+        >
           Registration
         </button>
       </form>
