@@ -1,13 +1,13 @@
-import source_1 from '../assets/images/mock/1.svg';
-import source_2 from '../assets/images/mock/2.svg';
-import source_3 from '../assets/images/mock/3.svg';
-import source_4 from '../assets/images/mock/4.svg';
-import source_5 from '../assets/images/mock/5.svg';
-import source_6 from '../assets/images/mock/6.svg';
-import source_7 from '../assets/images/mock/7.svg';
-import source_8 from '../assets/images/mock/8.svg';
-import source_9 from '../assets/images/mock/9.svg';
-import source_10 from '../assets/images/mock/10.svg';
+import source_1 from '../assets/images/mock/products/1.jpg';
+import source_2 from '../assets/images/mock/products/2.jpg';
+import source_3 from '../assets/images/mock/products/3.jpg';
+import source_4 from '../assets/images/mock/products/4.jpg';
+import source_5 from '../assets/images/mock/products/5.jpg';
+import source_6 from '../assets/images/mock/products/6.jpg';
+import source_7 from '../assets/images/mock/products/7.jpg';
+import source_8 from '../assets/images/mock/products/8.jpg';
+import source_9 from '../assets/images/mock/products/9.jpg';
+import source_10 from '../assets/images/mock/products/10.jpg';
 
 
 export const products = [
