@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import { Input } from './inputComponent';
-import { getLocalStorageItem, setLocalStorageItem } from '../../../components/utils/localStorage';
+import { Input } from '../../components/inputComponent';
+import { getLocalStorageItem, setLocalStorageItem } from '../../../../components/utils/localStorage';
 
 const defaultUser = {
   email: '',
   password: '',
 };
 
-export const SignIn = () => {
+const SignInForm = () => {
   const [user, setUser] = useState(defaultUser);
   const [error, setError] = useState('');
   const isSubmitDisabled = !user.email || !user.password;
@@ -73,3 +73,5 @@ export const SignIn = () => {
     </>
   );
 };
+
+export default SignInForm;
