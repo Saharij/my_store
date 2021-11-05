@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Input } from '../../components/inputComponent';
+import { Input } from '../../../../components/Input/Input';
 import { getLocalStorageItem, setLocalStorageItem } from '../../../../utils/localStorage';
 
 const defaultUser = {
