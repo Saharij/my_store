@@ -7,7 +7,7 @@ const defaultUser = {
   password: '',
 };
 
-const SignInForm = () => {
+export const SignInForm = () => {
   const [user, setUser] = useState(defaultUser);
   const [error, setError] = useState('');
   const isSubmitDisabled = !user.email || !user.password;
@@ -73,5 +73,3 @@ const SignInForm = () => {
     </>
   );
 };
-
-export default SignInForm;

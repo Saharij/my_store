@@ -1,10 +1,11 @@
-import React from 'react';
+import { SignUpForm } from './components/SignUpForm';
+import AuthPageTemplate from '../components/AuthPageTemplate';
 
 const SignUp = props => {
   return (
-    <div>
-      a
-    </div>
+    <AuthPageTemplate>
+      <SignUpForm />
+    </AuthPageTemplate>
   );
 };
 

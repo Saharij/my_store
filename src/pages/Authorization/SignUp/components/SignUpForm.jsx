@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { getLocalStorageItem, setLocalStorageItem } from '../../../components/utils/localStorage';
-import { Input } from './inputComponent';
+import { getLocalStorageItem, setLocalStorageItem } from '../../../../components/utils/localStorage';
+import { Input } from '../../components/inputComponent';
 
 const defaultUser = {
   name: '',
@@ -8,7 +8,7 @@ const defaultUser = {
   password: '',
 }
 
-export const SignUp = () => {
+export const SignUpForm = () => {
   const [user, setUser] = useState(defaultUser);
   const [error, setError] = useState('')
   const isSubmitDisabled = !user.name || !user.email || !user.password;
@@ -18,6 +18,8 @@ export const SignUp = () => {
       ...state,
       [name]: value,
     }))
+
+    setError('');
   }
 
   const signUpForm = (event) => {
