@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Input } from '../../components/inputComponent';
-import { getLocalStorageItem, setLocalStorageItem } from '../../../../components/utils/localStorage';
+import { getLocalStorageItem, setLocalStorageItem } from '../../../../utils/localStorage';
 
 const defaultUser = {
   email: '',
