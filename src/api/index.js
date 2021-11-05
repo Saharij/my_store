@@ -1,5 +1,4 @@
-import responseData from './mockData';
-
+import * as responseData from './mockData';
 
 export function callApi(endpoint) {
   const response = responseData[endpoint];
