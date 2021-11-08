@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { getLocalStorageItem, setLocalStorageItem } from '../../../../utils/localStorage';
 import { Input } from '../../../../components/Input/Input';
 
@@ -10,6 +11,7 @@ const defaultUser = {
 }
 
 export const SignUpForm = () => {
+  const history = useHistory();
   const [user, setUser] = useState(defaultUser);
   const [error, setError] = useState('')
   const isSubmitDisabled = !user.name || !user.email || !user.password;
@@ -38,6 +40,7 @@ export const SignUpForm = () => {
     }
 
     setUser(defaultUser);
+    return history.push('/products');
   }
 
   return (
