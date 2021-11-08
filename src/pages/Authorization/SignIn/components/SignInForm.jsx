@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Input } from '../../../../components/Input/Input';
 import { getLocalStorageItem, setLocalStorageItem } from '../../../../utils/localStorage';
@@ -9,6 +10,7 @@ const defaultUser = {
 };
 
 export const SignInForm = () => {
+  const history = useHistory();
   const [user, setUser] = useState(defaultUser);
   const [error, setError] = useState('');
   const isSubmitDisabled = !user.email || !user.password;
@@ -34,10 +36,11 @@ export const SignInForm = () => {
         console.log('loggAddIn');
         setLocalStorageItem('currentUser', user);
       } else {
-        setError('Email or password is incorrect')
+        setError('Email or password is incorrect');
       }
 
-      setUser(defaultUser)
+      setUser(defaultUser);
+      return history.push('/products');
     }
   }
 
