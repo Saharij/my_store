@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { getProducts } from "./api/products";
+import ProductCard from "./components/ProductCard";
 
-export const Products = () => {
+const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -25,35 +26,14 @@ export const Products = () => {
         Show: 10
         </option>
       </select>
-      <ul>
-        {products.map(({
-          id,
-          name,
-          price,
-          discount_price,
-          in_stock,
-          review_count,
-          source,
-        }) => (
-          <li
-            key={id}
-          >
-            {in_stock ? (
-              <p>in stock</p>
-            ) : (
-              <p>not available</p>
-            )}
-            <img
-              src={source}
-              alt={`Product ${id}`}
-            />
-            <span>Reviews({review_count})</span>
-            <h5>{name}</h5>
-            <p>{discount_price}</p>
-            <p>{price}</p>
-          </li>
-        ))}
-      </ul>
+      <div className="products">
+        {products.map(item => {
+          console.log(item);
+          return <ProductCard product={item} key={item.id} />
+        })}
+      </div>
     </>
   );
 };
+
+export default Products;
