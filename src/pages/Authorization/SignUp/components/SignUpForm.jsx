@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { getLocalStorageItem, setLocalStorageItem } from '../../../../utils/localStorage';
 import { Input } from '../../../../components/Input/Input';
 
@@ -77,6 +78,10 @@ export const SignUpForm = () => {
           Registration
         </button>
       </form>
+      <p>
+      Already have an account?
+       <Link to="/sign-in">Sign in</Link>
+      </p>
     </>
   );
 };
