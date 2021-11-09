@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { getProducts } from "./api/products";
-import ProductCard from "./components/ProductCard";
+import ProductsQuantityFilter from "./components/ProductsQuantityFilter/ProductsQuantityFilter";
+import ProductCard from "./components/ProductCard/ProductCard";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const [selectValue, setSelectValue] = useState('12')
 
   useEffect(() => {
     getProducts()
@@ -12,23 +14,20 @@ const Products = () => {
       })
   }, []);
 
-  const handleSelect = ({ target: {}}) => {}
+  const handleSelect = ({ target: { value }}) => {
+    setSelectValue(value);
+  }
+
+  const np = products.slice(0, selectValue);
 
   return (
     <>
-      <select
+      <ProductsQuantityFilter
         onChange={handleSelect}
-      >
-        <option value="5">
-          Show: 5
-        </option>
-        <option value="10">
-        Show: 10
-        </option>
-      </select>
+        value={selectValue}
+      />
       <div className="products">
-        {products.map(item => {
-          console.log(item);
+        {np.map(item => {
           return <ProductCard product={item} key={item.id} />
         })}
       </div>
