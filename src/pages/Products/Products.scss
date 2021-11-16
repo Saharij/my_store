@@ -1,0 +1,33 @@
+.products {
+  position: relative;
+
+  &__title {
+    display: inline-block;
+    font-size: 56px;
+  }
+
+  &__logo {
+    display: inline-block;
+    position: fixed;
+    left: 10px;
+    font-size: 36px;
+    max-width: 210px;
+    text-align: left;
+    text-transform: uppercase;
+    background-color: #fa807250;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1110px;
+  }
+
+  &__item {
+    margin-bottom: 50px;
+  }
+}
