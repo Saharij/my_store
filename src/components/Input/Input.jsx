@@ -1,6 +1,6 @@
 import T from 'prop-types';
 
-export const Input = ({
+const Input = ({
   type = 'text',
   name,
   value,
@@ -23,3 +23,5 @@ Input.propTypes = {
   placeholder: T.string,
   onChange: T.func.isRequired,
 }
+
+export default Input;

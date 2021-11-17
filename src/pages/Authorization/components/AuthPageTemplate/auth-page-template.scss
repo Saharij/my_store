@@ -15,12 +15,24 @@
   &__right {
     width: 40%;
     padding: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   &__logo {
     color: #fff;
     font-size: 52px;
     font-weight: 200;
+  }
+
+  &__welcome-title {
+    margin-bottom: 64px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: #343434;
   }
 
   &__welcome-art {

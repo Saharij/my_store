@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { Input } from '../../../../components/Input/Input';
+
+import Input from '../../../../components/Input/Input';
 import { getLocalStorageItem, setLocalStorageItem } from '../../../../utils/localStorage';
 
 const defaultUser = {
@@ -9,10 +10,11 @@ const defaultUser = {
   password: '',
 };
 
-export const SignInForm = () => {
+const SignInForm = () => {
   const history = useHistory();
   const [user, setUser] = useState(defaultUser);
   const [error, setError] = useState('');
+
   const isSubmitDisabled = !user.email || !user.password;
 
   const handleInputChange = ({ target: { value, name } }) => {
@@ -46,7 +48,6 @@ export const SignInForm = () => {
 
   return (
     <>
-      <h2>Welcome</h2>
       <form
         onSubmit={submitForm}
       >
@@ -81,3 +82,5 @@ export const SignInForm = () => {
     </>
   );
 };
+
+export default SignInForm;

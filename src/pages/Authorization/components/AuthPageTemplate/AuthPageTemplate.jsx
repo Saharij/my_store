@@ -21,6 +21,7 @@ const AuthPageTemplate = ({
         </div>
       </div>
       <div className="auth-page__right">
+        <h2 className="auth-page__welcome-title">Welcome</h2>
         {children}
       </div>
     </div>

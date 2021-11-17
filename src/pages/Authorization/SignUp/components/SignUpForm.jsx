@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
+
+import Input from '../../../../components/Input/Input';
 import { getLocalStorageItem, setLocalStorageItem } from '../../../../utils/localStorage';
-import { Input } from '../../../../components/Input/Input';
 
 const defaultUser = {
   name: '',
@@ -10,7 +11,7 @@ const defaultUser = {
   password: '',
 }
 
-export const SignUpForm = () => {
+const SignUpForm = () => {
   const history = useHistory();
   const [user, setUser] = useState(defaultUser);
   const [error, setError] = useState('')
@@ -45,10 +46,9 @@ export const SignUpForm = () => {
 
   return (
     <>
-      <h2>Welcome</h2>
       <form
-        action=""
         onSubmit={signUpForm}
+        className="auth-form"
       >
         <Input
           type="text"
@@ -88,3 +88,5 @@ export const SignUpForm = () => {
     </>
   );
 };
+
+export default SignUpForm;
