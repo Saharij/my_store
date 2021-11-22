@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
+import './SignInForm.scss';
 import Input from '../../../../components/Input/Input';
 import { getLocalStorageItem, setLocalStorageItem } from '../../../../utils/localStorage';
 
@@ -50,6 +51,7 @@ const SignInForm = () => {
     <>
       <form
         onSubmit={submitForm}
+        className="form"
       >
         <Input
           type="email"
@@ -71,14 +73,27 @@ const SignInForm = () => {
         <button
           type="submit"
           disabled={isSubmitDisabled}
+          className="form__btn-sign-in"
         >
           Sign in
         </button>
+        <span
+          className="form__or"
+        >
+          Or
+        </span>
       </form>
-      <p>
+      <p
+        className="form__no-account"
+      >
         No account?
-       <Link to="/sign-up">Create one</Link>
       </p>
+      <Link
+        to="/sign-up"
+        className="form__link"
+      >
+        Registration
+      </Link>
     </>
   );
 };

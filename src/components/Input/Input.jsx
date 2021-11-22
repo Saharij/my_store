@@ -1,4 +1,5 @@
 import T from 'prop-types';
+import './Input.scss'
 
 const Input = ({
   type = 'text',
@@ -13,6 +14,7 @@ const Input = ({
     value={value}
     placeholder={placeholder}
     onChange={onChange}
+    className="input"
   />
 );
 

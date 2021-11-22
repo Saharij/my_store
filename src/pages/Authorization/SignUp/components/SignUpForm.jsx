@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 
+import './SignUpForm.scss';
 import Input from '../../../../components/Input/Input';
 import { getLocalStorageItem, setLocalStorageItem } from '../../../../utils/localStorage';
 
@@ -74,17 +75,31 @@ const SignUpForm = () => {
         {error && (
           <p>{error}</p>
         )}
+
         <button
           type="submit"
           disabled={isSubmitDisabled}
+          className="auth-form__btn-registration"
         >
           Registration
         </button>
+        <span
+          className="auth-form__or"
+        >
+          Or
+        </span>
       </form>
-      <p>
-      Already have an account?
-       <Link to="/sign-in">Sign in</Link>
+      <p
+        className="auth-form__have-account"
+      >
+        Already have an account?
       </p>
+      <Link
+        to="/sign-in"
+        className="auth-form__link"
+      >
+        Sign in
+      </Link>
     </>
   );
 };
