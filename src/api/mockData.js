@@ -13,7 +13,7 @@ import source_10 from '../assets/images/mock/products/10.jpg';
 export const products = [
   {
     id: '1',
-    name: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One',
+    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
     price: 500,
     discount_price: 499,
     currency: 'USD',
@@ -24,7 +24,7 @@ export const products = [
   },
   {
     id: '2',
-    name: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One',
+    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
     price: 600,
     discount_price: 499,
     currency: 'USD',
@@ -35,7 +35,7 @@ export const products = [
   },
   {
     id: '3',
-    name: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One',
+    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
     price: 499,
     discount_price: 333,
     currency: 'USD',
@@ -46,7 +46,7 @@ export const products = [
   },
   {
     id: '4',
-    name: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One',
+    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
     price: 545,
     discount_price: 499,
     currency: 'USD',
@@ -57,7 +57,7 @@ export const products = [
   },
   {
     id: '5',
-    name: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One',
+    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
     price: 499,
     discount_price: 399,
     currency: 'USD',
@@ -68,7 +68,7 @@ export const products = [
   },
   {
     id: '6',
-    name: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One',
+    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
     price: 950,
     discount_price: 700,
     currency: 'USD',
@@ -79,7 +79,7 @@ export const products = [
   },
   {
     id: '7',
-    name: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One',
+    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
     price: 600,
     discount_price: 499,
     currency: 'USD',
@@ -90,7 +90,7 @@ export const products = [
   },
   {
     id: '8',
-    name: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One',
+    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
     price: 1025,
     discount_price: 870,
     currency: 'USD',
@@ -101,7 +101,7 @@ export const products = [
   },
   {
     id: '9',
-    name: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One',
+    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
     price: 499,
     discount_price: 350,
     currency: 'USD',
@@ -112,7 +112,7 @@ export const products = [
   },
   {
     id: '10',
-    name: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One',
+    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
     price: 499,
     discount_price: 375,
     currency: 'USD',
@@ -123,7 +123,7 @@ export const products = [
   },
   {
     id: '11',
-    name: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One',
+    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
     price: 545,
     discount_price: 499,
     currency: 'USD',
@@ -134,7 +134,7 @@ export const products = [
   },
   {
     id: '12',
-    name: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One',
+    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
     price: 1299,
     discount_price: 999,
     currency: 'USD',

@@ -1,11 +1,16 @@
 import { useState, useEffect } from "react";
+
+import "./Products.scss"
 import { getProducts } from "./api/products";
+import ProductsRows from "./components/ProductsRows/ProductsRows";
+import ProductsTile from "./components/ProductsTile/ProductsTile";
+import RowIcon from"../../assets/images/products-page/row-icon.svg";
+import TileIcon from "../../assets/images/products-page/tile-icon.svg";
 import ProductsQuantityFilter from "./components/ProductsQuantityFilter/ProductsQuantityFilter";
 import ProductsPositionFilter from "./components/ProductsPositionFilter/ProductsPositionFilter";
-import ProductCard from "./components/ProductCard/ProductCard";
-import "./Products.scss"
 
 const Products = () => {
+  const [mode, setMode] = useState('tile');
   const [products, setProducts] = useState([]);
   const [selectValue, setSelectValue] = useState('12');
   const [moreProducts, setMoreProducts] = useState(1);
@@ -17,6 +22,14 @@ const Products = () => {
         setProducts(data)
       })
   }, []);
+
+  const handleChangeOnTile = () => {
+    setMode('tile');
+  }
+
+  const handleChangeOnRow = () => {
+    setMode('rows');
+  }
 
   const handleShowMore = () => {
     setMoreProducts(prevValue => prevValue + 1);
@@ -42,9 +55,6 @@ const Products = () => {
 
   return (
     <div className="products">
-      <p className="products__logo">
-        Shop&#38;Tech
-      </p>
       <ProductsQuantityFilter
         onChange={handleSelect}
         value={selectValue}
@@ -53,18 +63,37 @@ const Products = () => {
         onChange={handleSelectPosition}
         value={selectPosition}
       />
-      <div className="products__list">
-        {np.map(item => {
-          return (
-            <div className="products__item">
-              <ProductCard
-                product={item}
-                key={item.id}
-              />
-            </div>
-          )
-        })}
-      </div>
+      <button
+        className="products__button-shape products__button-shape-tile"
+        onClick={handleChangeOnTile}
+      >
+        <img
+          src={TileIcon}
+          alt="Tile"
+          className="products__button-icon-tile"
+        />
+      </button>
+      <button
+        className="products__button-shape products__button-shape-row"
+        onClick={handleChangeOnRow}
+      >
+        <img
+          src={RowIcon}
+          alt="Row"
+          className="products__button-icon-row"
+        />
+      </button>
+      {mode === 'tile' && (
+        <ProductsTile
+          products={np}
+        />
+      )}
+      {mode === 'rows' && (
+        <ProductsRows
+          products={np}
+        />
+      )}
+
       {(selectValue * moreProducts) < products.length && (
         <button
           onClick={handleShowMore}

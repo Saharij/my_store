@@ -1,23 +1,7 @@
 .products {
   position: relative;
 
-  &__title {
-    display: inline-block;
-    font-size: 56px;
-  }
-
-  &__logo {
-    display: inline-block;
-    position: fixed;
-    left: 10px;
-    font-size: 36px;
-    max-width: 210px;
-    text-align: left;
-    text-transform: uppercase;
-    background-color: #fa807250;
-  }
-
-  &__list {
+  &__cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -27,28 +11,58 @@
     max-width: 1110px;
   }
 
+  &__rows {
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+
   &__item {
     margin-bottom: 50px;
   }
 
-  &__button-show-more {
-    cursor: pointer;
-    color: #fff;
-    font-size: 24px;
-    font-weight: 700;
-    background-color: #0156ff;
-    border: none;
-    border-radius: 28px;
-    padding: 9px 18px;
-    margin-bottom: 50px;
-    transition: transform 0.4s;
+  &__button {
+    &-shape {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
 
-    &:hover {
-      transform: scale(1.1);
+      &-tile {
+        margin-right: 5px;
+      }
     }
 
-    &:active {
-      background-color: blue;
+    &-icon {
+      &-tile {
+        width: 24px;
+        height: 24px;
+      }
+
+      &-row {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+
+    &-show-more {
+      cursor: pointer;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+      background-color: #0156ff;
+      border: none;
+      border-radius: 28px;
+      padding: 9px 18px;
+      margin-bottom: 50px;
+      transition: transform 0.4s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:active {
+        background-color: blue;
+      }
     }
   }
 }
