@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { Route, Switch, Redirect } from 'react-router-dom';
+
+import SignIn from './pages/Authorization/SignIn';
+import SignUp from './pages/Authorization/SignUp';
+import { authorized } from './redux/store';
+import Products from './pages/Products';
 import './App.css';
 
 function App() {
+  const isAuthorized = useSelector(authorized);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {isAuthorized ? (
+        <Switch>
+          <Route path="/products" component={Products} />
+          <Redirect to="/404" />
+        </Switch>
+      ) : (
+        <Switch>
+          <Route path="/sign-in" component={SignIn} />
+          <Route path="/sign-up" component={SignUp} />
+          <Redirect to="/sign-in" />
+        </Switch>
+      )}
     </div>
   );
 }
