@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import './SignInForm.scss';
 import Input from '../../../../components/Input/Input';
 import { getLocalStorageItem, setLocalStorageItem } from '../../../../utils/localStorage';
+import { loadUser } from '../../../../redux/store';
 
 const defaultUser = {
   email: '',
@@ -13,6 +15,7 @@ const defaultUser = {
 
 const SignInForm = () => {
   const history = useHistory();
+  const dispatch = useDispatch();
   const [user, setUser] = useState(defaultUser);
   const [error, setError] = useState('');
 
@@ -32,18 +35,19 @@ const SignInForm = () => {
     if (!isSubmitDisabled) {
       const users = getLocalStorageItem('users') || [];
 
-      const isCorrectUser = users.some(({ email, password }) =>
+      const isCorrectUser = users.find(({ email, password }) =>
         email === user.email && password === user.password);
+
+        console.log(isCorrectUser, 'aloldooeoe')
 
       if (isCorrectUser) {
         console.log('loggAddIn');
-        setLocalStorageItem('currentUser', user);
+        setLocalStorageItem('currentUser', isCorrectUser);
+        dispatch(loadUser(isCorrectUser.name));
+        history.push('/products');
       } else {
         setError('Email or password is incorrect');
       }
-
-      setUser(defaultUser);
-      return history.push('/products');
     }
   }
 

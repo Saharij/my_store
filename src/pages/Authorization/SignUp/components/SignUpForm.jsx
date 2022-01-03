@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 import './SignUpForm.scss';
+import { user } from '../../../../redux/store';
 import Input from '../../../../components/Input/Input';
+import { loadUser } from '../../../../redux/store';
 import { getLocalStorageItem, setLocalStorageItem } from '../../../../utils/localStorage';
 
 const defaultUser = {
@@ -14,6 +17,7 @@ const defaultUser = {
 
 const SignUpForm = () => {
   const history = useHistory();
+  const dispatch = useDispatch();
   const [user, setUser] = useState(defaultUser);
   const [error, setError] = useState('')
   const isSubmitDisabled = !user.name || !user.email || !user.password;
@@ -38,10 +42,12 @@ const SignUpForm = () => {
         setError('User with this email already exist!');
       } else {
         setLocalStorageItem('users', [...users, user]);
+        dispatch(loadUser(user.name));
       }
     }
 
     setUser(defaultUser);
+
     return history.push('/products');
   }
 
@@ -75,7 +81,6 @@ const SignUpForm = () => {
         {error && (
           <p>{error}</p>
         )}
-
         <button
           type="submit"
           disabled={isSubmitDisabled}

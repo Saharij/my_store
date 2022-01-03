@@ -1,7 +1,14 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
-import reducers from './reducers';
+import reducers, { LOAD_USER_SUCCESS } from './reducers';
+
+export const user = (state) => state.user;
+export const authorized = (state) => !!state.user;
+
+export const loadUser = (fullname) => {
+  return { type: LOAD_USER_SUCCESS, data: fullname };
+};
 
 const middlewares = [thunk];
 
@@ -12,8 +19,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // eslint-disable-next-line import/prefer-default-export
-export const configureStore = preLoadedState => createStore(
+export const configureStore = () => createStore(
   reducers,
-  preLoadedState,
   applyMiddleware(...middlewares),
 );
