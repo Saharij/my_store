@@ -1,10 +1,30 @@
-import './App.css';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { Route, Switch, Redirect } from 'react-router-dom';
+
+import SignIn from './pages/Authorization/SignIn/index';
+import SignUp from './pages/Authorization/SignUp/index';
+import { authorized } from './redux/store';
 import Products from './pages/Products/Products';
+import './App.css';
 
 function App() {
+  const isAuthorized = useSelector(authorized);
+
   return (
-    <div className="App">
-      <Products />
+    <div className="app">
+      {isAuthorized ? (
+        <Switch>
+          <Route path="/products" component={Products} />
+          <Redirect to="/404" />
+        </Switch>
+      ) : (
+        <Switch>
+          <Route path="/sign-in" component={SignIn} />
+          <Route path="/sign-up" component={SignUp} />
+          <Redirect to="/sign-in" />
+        </Switch>
+      )}
     </div>
   );
 }
