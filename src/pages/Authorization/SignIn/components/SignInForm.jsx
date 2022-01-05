@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 import './SignInForm.scss';
 import Input from '../../../../components/Input/Input';
-import AuthPageTemplate from '../../components/AuthPageTemplate/AuthPageTemplate';
 import { getLocalStorageItem, setLocalStorageItem } from '../../../../utils/localStorage';
 import { loadUser } from '../../../../redux/store';
 
@@ -19,7 +18,6 @@ const SignInForm = () => {
   const dispatch = useDispatch();
   const [user, setUser] = useState(defaultUser);
   const [error, setError] = useState('');
-
   const isSubmitDisabled = !user.email || !user.password;
 
   const handleInputChange = ({ target: { value, name } }) => {
@@ -39,10 +37,7 @@ const SignInForm = () => {
       const isCorrectUser = users.find(({ email, password }) =>
         email === user.email && password === user.password);
 
-        console.log(isCorrectUser, 'aloldooeoe')
-
       if (isCorrectUser) {
-        console.log('loggAddIn');
         setLocalStorageItem('currentUser', isCorrectUser);
         dispatch(loadUser(isCorrectUser.name));
         history.push('/products');

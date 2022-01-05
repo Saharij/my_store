@@ -1,7 +1,11 @@
+import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 
 import "./Products.scss"
+import { user } from "../../redux/store";
 import { getProducts } from "./api/products";
+import Basket from "../../assets/icons/basket.svg";
+import AvatarIcon from "../../assets/icons/avatar.svg";
 import ProductsRows from "./components/ProductsRows/ProductsRows";
 import ProductsTile from "./components/ProductsTile/ProductsTile";
 import RowIcon from"../../assets/images/products-page/row-icon.svg";
@@ -11,6 +15,7 @@ import ProductsPositionFilter from "./components/ProductsPositionFilter/Products
 
 const Products = () => {
   const [mode, setMode] = useState('tile');
+  const currentUserName = useSelector(user);
   const [products, setProducts] = useState([]);
   const [selectValue, setSelectValue] = useState('12');
   const [moreProducts, setMoreProducts] = useState(1);
@@ -54,55 +59,76 @@ const Products = () => {
   });
 
   return (
-    <div className="products">
-      <ProductsQuantityFilter
-        onChange={handleSelect}
-        value={selectValue}
-      />
-      <ProductsPositionFilter
-        onChange={handleSelectPosition}
-        value={selectPosition}
-      />
-      <button
-        className="products__button-shape products__button-shape-tile"
-        onClick={handleChangeOnTile}
-      >
-        <img
-          src={TileIcon}
-          alt="Tile"
-          className="products__button-icon-tile"
+    <>
+      <section className="header">
+        <ProductsQuantityFilter
+          onChange={handleSelect}
+          value={selectValue}
         />
-      </button>
-      <button
-        className="products__button-shape products__button-shape-row"
-        onClick={handleChangeOnRow}
-      >
-        <img
-          src={RowIcon}
-          alt="Row"
-          className="products__button-icon-row"
+        <ProductsPositionFilter
+          onChange={handleSelectPosition}
+          value={selectPosition}
         />
-      </button>
-      {mode === 'tile' && (
-        <ProductsTile
-          products={np}
-        />
-      )}
-      {mode === 'rows' && (
-        <ProductsRows
-          products={np}
-        />
-      )}
-
-      {(selectValue * moreProducts) < products.length && (
         <button
-          onClick={handleShowMore}
-          className="products__button-show-more"
+          className="header__layout header__layout-tile"
+          onClick={handleChangeOnTile}
         >
-          Show more
+          <img
+            src={TileIcon}
+            alt="Tile"
+            className="header__layout-icon-tile"
+          />
         </button>
-      )}
-    </div>
+        <button
+          className="header__layout header__layout-row"
+          onClick={handleChangeOnRow}
+        >
+          <img
+            src={RowIcon}
+            alt="Row"
+            className="header__layout-icon-row"
+          />
+        </button>
+        <div className="header__basket">
+          <img
+            src={Basket}
+            alt="Basket"
+            title="It's not working right now because it's under development"
+          />
+        </div>
+        <div className="header__avatar">
+          <h4 className="header__avatar-title">
+          </h4>
+            {currentUserName}
+          <img
+            src={AvatarIcon}
+            alt="avatar"
+            className="header__avatar-icon"
+          />
+        </div>
+      </section>
+      <section className="products">
+        {mode === 'tile' && (
+          <ProductsTile
+            products={np}
+          />
+        )}
+        {mode === 'rows' && (
+          <ProductsRows
+            products={np}
+          />
+        )}
+
+        {(selectValue * moreProducts) < products.length && (
+          <button
+            onClick={handleShowMore}
+            className="products__button-show-more"
+          >
+            Show more
+          </button>
+        )}
+      </section>
+    </>
   );
 };
 

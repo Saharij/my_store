@@ -20,15 +20,36 @@
     margin-bottom: 50px;
   }
 
-  &__button {
-    &-shape {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
+  &__button-show-more {
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #0156ff;
+    border: none;
+    border-radius: 28px;
+    padding: 9px 18px;
+    margin-bottom: 50px;
+    transition: transform 0.4s;
 
-      &-tile {
-        margin-right: 5px;
-      }
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      background-color: blue;
+    }
+  }
+}
+
+.header {
+  &__layout {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &-tile {
+      margin-right: 5px;
     }
 
     &-icon {
@@ -42,27 +63,18 @@
         height: 25px;
       }
     }
+  }
 
+  &__avatar {
+    display: flex;
 
-    &-show-more {
-      cursor: pointer;
-      color: #fff;
-      font-size: 24px;
-      font-weight: 700;
-      background-color: #0156ff;
-      border: none;
-      border-radius: 28px;
-      padding: 9px 18px;
-      margin-bottom: 50px;
-      transition: transform 0.4s;
+    &-title {
+      letter-spacing: 1px;
+      margin-right: 5px;
+    }
 
-      &:hover {
-        transform: scale(1.1);
-      }
-
-      &:active {
-        background-color: blue;
-      }
+    &-icon {
+      width: 20px;
     }
   }
 }
