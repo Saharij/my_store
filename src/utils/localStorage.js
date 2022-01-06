@@ -6,3 +6,4 @@ export const setLocalStorageItem = (key, value) => {
   return window.localStorage.setItem(key, JSON.stringify(value));
 };
 
+console.log(getLocalStorageItem(2))

@@ -43,6 +43,10 @@
 }
 
 .header {
+  max-height: 50px;
+  background-color: red;
+
+
   &__layout {
     background-color: transparent;
     border: none;
