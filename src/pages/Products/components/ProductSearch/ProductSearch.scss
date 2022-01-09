@@ -1,0 +1,27 @@
+.search {
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 2.5px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05);
+  padding-left: 10px;
+  height: 35px;
+  width: 400px;
+
+  &:hover {
+    border-color: black;
+  }
+
+  &-icon {
+    margin-right: 2px;
+    transform: scale(0.9);
+  }
+
+  &-input {
+    font-size: 17px;
+    border-color: transparent;
+    background-color: transparent;
+    outline: transparent;
+    width: 350px;
+  }
+}

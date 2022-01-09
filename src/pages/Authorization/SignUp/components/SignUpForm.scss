@@ -1,0 +1,66 @@
+.auth-form {
+  display: flex;
+  flex-direction: column;
+
+  &__btn-registration {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    width: 358px;
+    height: 40px;
+    padding: 5px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    background-color: #3949ab;
+    color: #fff;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+
+  &__or {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &::before {
+      display: block;
+      content: '';
+      margin-right: 4px;
+      border-bottom: 1px solid #e6e9fa;
+      width: 93px;
+    }
+
+    &::after {
+      display: block;
+      content: '';
+      margin-left: 4px;
+      border-bottom: 1px solid #e6e9fa;
+      width: 93px;
+    }
+  }
+
+  &__have-account {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #828282;
+    line-height: 19px;
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: center;
+    width: 358px;
+    height: 40px;
+    padding-top: 5px;
+    color: #3949ab;
+    background-color: #fff;
+    border: 1px solid #3949ab;
+    border-radius: 40px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
