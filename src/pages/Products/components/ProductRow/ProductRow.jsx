@@ -1,4 +1,5 @@
 import './ProductRow.scss';
+import Hightlight from '../Hightlight/Hightlight';
 
 const ProductRow = ({ product: {
   name,
@@ -25,7 +26,9 @@ const ProductRow = ({ product: {
 
       <div className="product-row__info">
         <h5 className="product-row__name">
-          {name}
+          <Hightlight
+            string={name}
+          />
         </h5>
         <div className="product-row__price">
           <p className="product-row__price-full">

@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 import './SignUpForm.scss';
-import { user } from '../../../../redux/store';
 import Input from '../../../../components/Input/Input';
 import { loadUser } from '../../../../redux/store';
 import { getLocalStorageItem, setLocalStorageItem } from '../../../../utils/localStorage';

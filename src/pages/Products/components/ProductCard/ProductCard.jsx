@@ -1,3 +1,4 @@
+import Hightlight from '../Hightlight/Hightlight';
 import './ProductCard.scss';
 
 const ProductCard = ({ product: {
@@ -35,7 +36,9 @@ const ProductCard = ({ product: {
       </span>
       <div className="product-card__name-box">
         <h5 className="product-card__name">
-          {name}
+          <Hightlight
+            string={name}
+          />
         </h5>
       </div>
 
