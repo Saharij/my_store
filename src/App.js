@@ -13,7 +13,7 @@ function App() {
   const isAuthorized = useSelector(authorized);
   const currentUser = JSON.parse(localStorage.currentUser);
 
-  if (currentUser.name.length > 1) {
+  if (currentUser.name) {
     dispatch(loadUser(currentUser.name))
   }
 
@@ -22,7 +22,7 @@ function App() {
       {isAuthorized ? (
         <Switch>
           <Route path="/products" component={Products} />
-          <Redirect to="/404" />
+          <Redirect to="/products" />
         </Switch>
       ) : (
         <Switch>
