@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/my_store/static/css/main.3bf99bbe.chunk.css",
-    "main.js": "/my_store/static/js/main.854f18cf.chunk.js",
-    "main.js.map": "/my_store/static/js/main.854f18cf.chunk.js.map",
-    "runtime-main.js": "/my_store/static/js/runtime-main.25e0037e.js",
-    "runtime-main.js.map": "/my_store/static/js/runtime-main.25e0037e.js.map",
-    "static/js/2.24d332e4.chunk.js": "/my_store/static/js/2.24d332e4.chunk.js",
-    "static/js/2.24d332e4.chunk.js.map": "/my_store/static/js/2.24d332e4.chunk.js.map",
-    "static/js/3.81ace3a4.chunk.js": "/my_store/static/js/3.81ace3a4.chunk.js",
-    "static/js/3.81ace3a4.chunk.js.map": "/my_store/static/js/3.81ace3a4.chunk.js.map",
+    "main.css": "/my_store/static/css/main.cc32fd99.chunk.css",
+    "main.js": "/my_store/static/js/main.aa5b9bdb.chunk.js",
+    "main.js.map": "/my_store/static/js/main.aa5b9bdb.chunk.js.map",
+    "runtime-main.js": "/my_store/static/js/runtime-main.c4ed321d.js",
+    "runtime-main.js.map": "/my_store/static/js/runtime-main.c4ed321d.js.map",
+    "static/js/2.c8e6734c.chunk.js": "/my_store/static/js/2.c8e6734c.chunk.js",
+    "static/js/2.c8e6734c.chunk.js.map": "/my_store/static/js/2.c8e6734c.chunk.js.map",
+    "static/js/3.c6967e45.chunk.js": "/my_store/static/js/3.c6967e45.chunk.js",
+    "static/js/3.c6967e45.chunk.js.map": "/my_store/static/js/3.c6967e45.chunk.js.map",
     "index.html": "/my_store/index.html",
-    "static/css/main.3bf99bbe.chunk.css.map": "/my_store/static/css/main.3bf99bbe.chunk.css.map",
-    "static/js/2.24d332e4.chunk.js.LICENSE.txt": "/my_store/static/js/2.24d332e4.chunk.js.LICENSE.txt",
+    "static/css/main.cc32fd99.chunk.css.map": "/my_store/static/css/main.cc32fd99.chunk.css.map",
+    "static/js/2.c8e6734c.chunk.js.LICENSE.txt": "/my_store/static/js/2.c8e6734c.chunk.js.LICENSE.txt",
     "static/media/1.1f380512.jpg": "/my_store/static/media/1.1f380512.jpg",
     "static/media/10.16240eee.jpg": "/my_store/static/media/10.16240eee.jpg",
     "static/media/4.309d713a.jpg": "/my_store/static/media/4.309d713a.jpg",
@@ -19,17 +19,19 @@
     "static/media/6.53876ed0.jpg": "/my_store/static/media/6.53876ed0.jpg",
     "static/media/7.446420eb.jpg": "/my_store/static/media/7.446420eb.jpg",
     "static/media/9.14cba0ac.jpg": "/my_store/static/media/9.14cba0ac.jpg",
-    "static/media/avatar.8bb4ebbb.svg": "/my_store/static/media/avatar.8bb4ebbb.svg",
+    "static/media/avatar-light.6b6d9f6e.svg": "/my_store/static/media/avatar-light.6b6d9f6e.svg",
     "static/media/basket.c43905b8.svg": "/my_store/static/media/basket.c43905b8.svg",
     "static/media/ProductCard.scss": "/my_store/static/media/tick-icon.0e51d979.svg",
+    "static/media/logo.18d34ed6.svg": "/my_store/static/media/logo.18d34ed6.svg",
     "static/media/row-icon.42c1b2f5.svg": "/my_store/static/media/row-icon.42c1b2f5.svg",
     "static/media/tile-icon.12155363.svg": "/my_store/static/media/tile-icon.12155363.svg",
+    "static/media/vector.c2afd402.svg": "/my_store/static/media/vector.c2afd402.svg",
     "static/media/welcome-art.e2ffa2c4.svg": "/my_store/static/media/welcome-art.e2ffa2c4.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.25e0037e.js",
-    "static/js/2.24d332e4.chunk.js",
-    "static/css/main.3bf99bbe.chunk.css",
-    "static/js/main.854f18cf.chunk.js"
+    "static/js/runtime-main.c4ed321d.js",
+    "static/js/2.c8e6734c.chunk.js",
+    "static/css/main.cc32fd99.chunk.css",
+    "static/js/main.aa5b9bdb.chunk.js"
   ]
 }
