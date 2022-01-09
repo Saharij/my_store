@@ -4,18 +4,18 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 
 import './App.css';
 import Products from './pages/Products/Products';
-import { authorized, loadUser } from './redux/store';
+import { authorized } from './redux/store';
 import SignIn from './pages/Authorization/SignIn/index';
 import SignUp from './pages/Authorization/SignUp/index';
 
 function App() {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const isAuthorized = useSelector(authorized);
-  const currentUser = JSON.parse(localStorage.currentUser);
+  // const currentUser = JSON.parse(localStorage.currentUser);
 
-  if (currentUser?.name) {
-    dispatch(loadUser(currentUser.name));
-  }
+  // if (currentUser?.name) {
+  //   dispatch(loadUser(currentUser.name));
+  // }
 
   return (
     <div className="app">
