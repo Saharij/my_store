@@ -33,9 +33,11 @@ const ProductCard = ({ product: {
       <span className="product-card__review">
         Reviews({review_count})
       </span>
-      <h5 className="product-card__name">
-        {name}
-      </h5>
+      <div className="product-card__name-box">
+        <h5 className="product-card__name">
+          {name}
+        </h5>
+      </div>
 
       <div className="product-card__price">
         <p className="product-card__price-full">

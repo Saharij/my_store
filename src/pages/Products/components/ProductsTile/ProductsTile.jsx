@@ -5,10 +5,7 @@ const ProductsTile = ({ products }) => {
     <div className="products__cards">
       {products.map(item => {
         return (
-          <div
-            key={item.id}
-            className="products__item"
-          >
+          <div key={item.id}>
             <ProductCard
               product={item}
             />

@@ -1,11 +1,14 @@
 .products {
   position: relative;
+  padding-top: 120px;
+  padding-bottom: 50px;
+  background: radial-gradient(circle, rgba(249,243,243,1) 15%, rgba(224,223,222,0.8953956582633054) 43%, rgba(231,233,244,0.9542191876750701) 69%, rgba(237,245,254,1) 100%);
 
   &__cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    gap: 35px;
+    padding-top: 30px;
     margin-right: auto;
     margin-left: auto;
     max-width: 1110px;
@@ -16,20 +19,17 @@
     margin-bottom: 50px;
   }
 
-  &__item {
-    margin-bottom: 50px;
-  }
-
   &__button-show-more {
+    display: block;
     cursor: pointer;
     color: #fff;
     font-size: 24px;
     font-weight: 700;
     background-color: #0156ff;
     border: none;
-    border-radius: 28px;
+    border-radius: 12px;
     padding: 9px 18px;
-    margin-bottom: 50px;
+    margin: 15px auto 50px;
     transition: transform 0.4s;
 
     &:hover {
@@ -40,39 +40,104 @@
       background-color: blue;
     }
   }
+
+  &-control__layout-buttons {
+    margin-left: 30px;
+  }
+
+  &-filters {
+    display: flex;
+  }
+
+  &-control {
+    display: flex;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1110px;
+
+    &__layout {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      &-tile {
+        margin-right: 5px;
+      }
+
+      &-icon {
+        &-tile {
+          width: 24px;
+          height: 24px;
+        }
+
+        &-row {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
 }
 
 .header {
-  max-height: 50px;
-  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  padding-right: 40px;
+  padding-left: 40px;
+  background-color: #282c34;
 
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
 
-  &__layout {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+  &__title {
+    color: #fff;
+    margin-left: 10px;
+  }
 
-    &-tile {
-      margin-right: 5px;
-    }
+  &__date {
+    color: white;
+    line-height: 50px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+  }
 
-    &-icon {
-      &-tile {
-        width: 24px;
-        height: 24px;
-      }
+  &__basket {
+    position: relative;
+    background-color: lightgray;
+    padding: 2px 2px 0 2px;
+    border: 2px solid black;
+    border-radius: 9px;
+    margin-right: 20px;
+    transition: transform 0.3s, background-color 0.3s;
 
-      &-row {
-        width: 25px;
-        height: 25px;
+    &:hover {
+      transform: scale(1.2);
+      background-color: gray;
+      cursor: pointer;
+
+      &::before {
+        display: block;
+        position: absolute;
+        content: 'X';
+        color: red;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(2);
       }
     }
   }
 
   &__avatar {
     display: flex;
+    align-items: center;
+    right: 0;
 
     &-title {
+      color: #fff;
       letter-spacing: 1px;
       margin-right: 5px;
     }

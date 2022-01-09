@@ -13,7 +13,7 @@ import source_10 from '../assets/images/mock/products/10.jpg';
 export const products = [
   {
     id: '1',
-    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
+    name: 'Laptop Dell Vostro 15 3500 (N3001VN3500UA03_2201_UBU) Black',
     price: 500,
     discount_price: 499,
     currency: 'USD',
@@ -24,7 +24,7 @@ export const products = [
   },
   {
     id: '2',
-    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
+    name: 'Laptop HP ZBook Fury 17 G7 (9VE95AV_V4) Silver',
     price: 600,
     discount_price: 499,
     currency: 'USD',
@@ -35,7 +35,7 @@ export const products = [
   },
   {
     id: '3',
-    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
+    name: 'Laptop ASUS TUF Gaming F15 FX506HCB-HN161 (90NR0723-M04940) Eclipse Gray',
     price: 499,
     discount_price: 333,
     currency: 'USD',
@@ -46,7 +46,7 @@ export const products = [
   },
   {
     id: '4',
-    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
+    name: 'Laptop Acer Nitro 5 AN517-52-50DD (NH.QDVEU.00K) Obsidian Black',
     price: 545,
     discount_price: 499,
     currency: 'USD',
@@ -57,7 +57,7 @@ export const products = [
   },
   {
     id: '5',
-    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
+    name: 'Laptop Acer Swift 5 SF514-55TA-55U6 (NX.A6SEU.005) Mist Green',
     price: 499,
     discount_price: 399,
     currency: 'USD',
@@ -68,7 +68,7 @@ export const products = [
   },
   {
     id: '6',
-    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
+    name: 'Laptop ASUS ZenBook 14 UM425QA-KI080 (90NB0TV1-M02230) Pine Grey',
     price: 950,
     discount_price: 700,
     currency: 'USD',
@@ -79,7 +79,7 @@ export const products = [
   },
   {
     id: '7',
-    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
+    name: 'Laptop HP Envy 13-ba1012ua (4A7L7EA) Silver',
     price: 600,
     discount_price: 499,
     currency: 'USD',
@@ -90,7 +90,7 @@ export const products = [
   },
   {
     id: '8',
-    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
+    name: 'Laptop ASUS ExpertBook B1 B1400CEAE-EB3492 14" IPS (90NX0421-M00BB0) Black / Intel Celeron 6305 / SSD 256 ГБ',
     price: 1025,
     discount_price: 870,
     currency: 'USD',
@@ -101,7 +101,7 @@ export const products = [
   },
   {
     id: '9',
-    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
+    name: 'Laptop Apple MacBook Air 13" M1 256GB 2020 (MGN63) Space Gray',
     price: 499,
     discount_price: 350,
     currency: 'USD',
@@ -112,7 +112,7 @@ export const products = [
   },
   {
     id: '10',
-    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
+    name: 'Laptop Honor MagicBook X 15 (BBR-WAI9A) Space Grey',
     price: 499,
     discount_price: 375,
     currency: 'USD',
@@ -123,7 +123,7 @@ export const products = [
   },
   {
     id: '11',
-    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
+    name: 'Laptop Acer Aspire 5 A517-52G-31DC (NX.A5HEU.00T) Pure Silver',
     price: 545,
     discount_price: 499,
     currency: 'USD',
@@ -134,7 +134,7 @@ export const products = [
   },
   {
     id: '12',
-    name: 'MSI CREATOR 17 A10SFS-240AU 17 UHD 4K HDR Thin Bezel Intel 10th Gen i7 10875H - RTX 2070 SUPER MAX Q - 16GB RAM - 1TB SSD NVME - Windows 10 PRO Laptop',
+    name: 'Laptop Lenovo IdeaPad 3 14ITL6 (82H700L0RA) Arctic Grey',
     price: 1299,
     discount_price: 999,
     currency: 'USD',

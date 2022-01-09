@@ -8,6 +8,7 @@ const ProductsQuantityFilter = ({ onChange, value }) => {
     <select
         onChange={onChange}
         value={value}
+        className="quantity-filter"
       >
         {options.map(item => (
             <option
