@@ -6,6 +6,7 @@ import { user } from "../../redux/store";
 import { getProducts } from "./api/products";
 import Logo from "../../assets/icons/logo.svg";
 import Basket from "../../assets/icons/basket.svg";
+import { SearchContext } from "../../context/context";
 import AvatarIcon from "../../assets/icons/avatar-light.svg";
 import ProductDate from "./components/ProductDate/ProductDate";
 import ProductsRows from "./components/ProductsRows/ProductsRows";
@@ -36,6 +37,10 @@ const Products = () => {
     setSearchValue(value);
   };
 
+  const filteredProducts = products.filter(({ name }) => (
+    name.toLowerCase().includes(searchValue.toLowerCase().trim())
+  ));
+
   const handleChangeOnTile = () => {
     setMode('tile');
   }
@@ -57,14 +62,14 @@ const Products = () => {
     setSelectPosition(value);
   }
 
-  let np = products.slice(0, selectValue * moreProducts);
-  np.sort((a, b) => {
+  const sortedProducts = filteredProducts.sort((a, b) => {
     if (selectPosition === 'From cheap to expensive') {
       return a.discount_price - b.discount_price;
     } else {
       return b.discount_price - a.discount_price;
     }
   });
+  const finishedProducts = sortedProducts.slice(0, selectValue * moreProducts);
 
   return (
     <>
@@ -75,10 +80,7 @@ const Products = () => {
             Online store
           </h4>
         </div>
-        <div className="header__date">
-          <ProductDate />
-          7th January 2022
-        </div>
+        <ProductDate />
         <div className="header__avatar">
           <div
             className="header__basket"
@@ -138,16 +140,18 @@ const Products = () => {
             </div>
           </div>
         </div>
-        {mode === 'tile' && (
-          <ProductsTile
-            products={np}
-          />
-        )}
-        {mode === 'rows' && (
-          <ProductsRows
-            products={np}
-          />
-        )}
+        <SearchContext.Provider value={searchValue}>
+          {mode === 'tile' && (
+            <ProductsTile
+              products={finishedProducts}
+            />
+          )}
+          {mode === 'rows' && (
+            <ProductsRows
+              products={finishedProducts}
+            />
+          )}
+        </SearchContext.Provider>
 
         {(selectValue * moreProducts) < products.length && (
           <button
