@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import './auth-page-template.scss';
+import './AuthPageTemplate.scss';
 import welcomeImage from '../../../../assets/images/auth-page/welcome-art.svg';
 
 const AuthPageTemplate = ({
